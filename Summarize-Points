@@ -1,0 +1,45 @@
+# 2020-01-04--
+
+//今日刷题总结
+
+1、在Java中，存放字符串常量的对象属于（String）类对象
+
+2、下面代码将输出什么内容（ false ）
+      public class SystemUtil{
+      public static boolean isAdmin(String userId){
+      return userId.toLowerCase()=="admin";
+      }
+      public static void main(String[] args){
+      System.out.println(isAdmin("Admin"));
+      }
+      }
+   本题涉及两个知识点: 
+  （1）toLowerCase()方法 —>把输入字符串中的大写字母全部变成小写字母
+           toUpperCase()方法—>把输入的字符串中的小写字母全部变成大写字母
+  （2）“==”和“equals”的区别？
+          （  此题输出false ，值相同，对象不同。）
+           == 比较的是变量栈内存中存放的对象的堆内存地址（是否指向同一个对 
+                                                                                                                     象）
+          equals 比较对象的原始值是否相等（引用可不同，但值相同）
+          
+3、static 修饰的变量是属于类的，而非属于对象。但确是为所有对象所共享。
+
+4、在运行时，由java解释器自动引入，而不用import语句引入的包是 （java.lang）
+
+5、下面代码的输出结果是（false）
+       boolean b=true?false:true==true?false:true;
+       System.out.println(b);
+     所考察的知识点：三目运算符
+       如果b为真的话输出false,为假的话则执行后面的三目运算符
+
+6、用命令方式运行以下代码的运行结果是（程序运行错误）
+public class f{
+public static void main(String[] args){
+String foo1 = args[1];
+String foo2 = args[2];
+String foo3 = args[3];
+}
+}
+
+命令: java f a b c
+
